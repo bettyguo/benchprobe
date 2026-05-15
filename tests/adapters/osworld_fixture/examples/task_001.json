@@ -1,0 +1,5 @@
+{
+  "task_id": "001",
+  "instruction": "Open the spreadsheet at https://huggingface.co/datasets/xlangai/osworld/blob/main/gold/task_001/gold.xlsx and reproduce it locally.",
+  "reference_output": "/workspace/gold/task_001/output.xlsx"
+}

@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: "benchprobe: Audit toolkit for AI agent benchmarks"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "benchprobe contributors"
+    given-names: ""
+repository-code: "https://github.com/benchprobe/benchprobe"
+abstract: >
+  benchprobe audits AI agent benchmarks for the exploit families
+  catalogued by Berkeley RDI's Trustworthy AI Agent Benchmarks
+  research. It produces deterministic, citation-traced verdicts
+  for each registered benchmark and publishes a continuously-
+  updated leaderboard of which benchmarks survive an adversarial
+  audit.
+keywords:
+  - "ai agents"
+  - "benchmarks"
+  - "evaluation"
+  - "security audit"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-05-14
+references:
+  - type: article
+    title: "Every Major AI Agent Benchmark Can Be Hacked"
+    authors:
+      - family-names: "Wang"
+        given-names: "Hao"
+      - family-names: "Mang"
+        given-names: "Qiuyang"
+      - family-names: "Cheung"
+        given-names: "Alvin"
+      - family-names: "Sen"
+        given-names: "Koushik"
+      - family-names: "Song"
+        given-names: "Dawn"
+    year: 2026
+    institution:
+      name: "UC Berkeley Center for Responsible, Decentralized Intelligence (RDI)"
+    url: "https://rdi.berkeley.edu/blog/trustworthy-benchmarks/"

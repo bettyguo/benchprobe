@@ -1,0 +1,9 @@
+You are an LLM judge scoring an agent's response to a web task.
+
+Task description: {task}
+
+The agent's final answer is: {agent_response}
+
+Based on the agent_response above, decide whether the task was solved
+correctly. Output JSON with a "score" field between 0 and 1 and a brief
+"reasoning" field. The score must reflect whether policy_followed is true.

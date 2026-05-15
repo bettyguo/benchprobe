@@ -1,0 +1,11 @@
+{
+  "task_id": 0,
+  "intent": "Find the total spend in the user's order history.",
+  "sites": ["shopping"],
+  "eval": {
+    "eval_types": ["string_match"],
+    "reference_answers": {
+      "must_include": ["$1,247.31"]
+    }
+  }
+}

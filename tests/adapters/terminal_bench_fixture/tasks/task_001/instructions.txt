@@ -1,0 +1,2 @@
+Install a Python C extension under /workspace/output/mylib.so that
+exposes an `add(int, int) -> int` function and verifies addition.

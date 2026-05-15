@@ -1,0 +1,8 @@
+{
+  "intent": "Submit a return request for the most recent order.",
+  "eval": {
+    "reference_answers": {
+      "must_include": ["RMA-99014"]
+    }
+  }
+}

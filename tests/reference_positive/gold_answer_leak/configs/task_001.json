@@ -1,0 +1,8 @@
+{
+  "intent": "Find the user's order history and report the total spend.",
+  "eval": {
+    "reference_answers": {
+      "must_include": ["$1,247.31"]
+    }
+  }
+}

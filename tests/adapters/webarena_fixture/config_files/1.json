@@ -1,0 +1,11 @@
+{
+  "task_id": 1,
+  "intent": "Submit a return request for the most recent order.",
+  "sites": ["shopping"],
+  "eval": {
+    "eval_types": ["string_match"],
+    "reference_answers": {
+      "must_include": ["RMA-99014"]
+    }
+  }
+}

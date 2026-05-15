@@ -1,0 +1,5 @@
+{
+  "task_id": "001",
+  "intent": "Compute the answer to the question.",
+  "reference_dataset": "https://huggingface.co/datasets/example/answers/blob/main/task_001.json"
+}

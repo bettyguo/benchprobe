@@ -1,0 +1,91 @@
+name: leaderboard-sweep
+
+on:
+  schedule:
+    # Mondays 12:00 UTC.
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print proposed changes; do not commit or PR."
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Run sweep
+        id: sweep
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -e
+          changed_any=0
+          changed_lines=""
+          for bench in $(python -c "from benchprobe.adapters import adapter_names; print(' '.join(adapter_names()))"); do
+            fixture="tests/adapters/${bench}_fixture"
+            if [ ! -d "$fixture" ]; then
+              echo "::warning::no fixture for $bench; skipping until a real clone is wired up"
+              continue
+            fi
+            set +e
+            python -m benchprobe.cli leaderboard upsert "$bench" \
+              --fixture "$fixture" \
+              --data leaderboard/data.json \
+              ${DRY_RUN:+--dry-run}
+            rc=$?
+            set -e
+            if [ "$rc" -eq 1 ]; then
+              changed_any=1
+              changed_lines="${changed_lines}- ${bench}: row changed\n"
+            elif [ "$rc" -ne 0 ]; then
+              echo "::warning::audit of ${bench} ran but exited with rc=${rc}; "\
+              "marking inconclusive in the PR body."
+              changed_any=1
+              changed_lines="${changed_lines}- ${bench}: audit error (inconclusive)\n"
+            fi
+          done
+          echo "changed_any=$changed_any" >> "$GITHUB_OUTPUT"
+          {
+            echo "changed_lines<<EOF"
+            printf "%b" "$changed_lines"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Render leaderboard site
+        if: steps.sweep.outputs.changed_any == '1' && inputs.dry_run != true
+        run: python -m benchprobe.cli leaderboard render
+
+      - name: Open PR
+        if: steps.sweep.outputs.changed_any == '1' && inputs.dry_run != true
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "leaderboard: weekly sweep"
+          branch: leaderboard-sweep
+          delete-branch: true
+          title: "leaderboard: weekly sweep"
+          body: |
+            Automated leaderboard sweep.
+
+            Changes:
+            ${{ steps.sweep.outputs.changed_lines }}
+
+            Benchmark sources that were unreachable on this sweep day are
+            recorded as INCONCLUSIVE rather than silently dropped.
+          add-paths: |
+            leaderboard/data.json
+            leaderboard/site/index.html

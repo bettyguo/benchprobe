@@ -1,0 +1,90 @@
+{
+  "entries": [
+    {
+      "benchmark": "swebench",
+      "version_sha": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0",
+      "family_verdicts": {
+        "env_trojanization": "vulnerable",
+        "gold_answer_leak": "pass",
+        "judge_prompt_injection": "inconclusive",
+        "empty_response_acceptance": "pass",
+        "config_lookup": "pass",
+        "assertion_rewrite": "pass",
+        "wrapper_no_op": "pass",
+        "result_pattern_match": "pass"
+      },
+      "audited_at": "2026-05-15T03:02:43.545359Z",
+      "auditor_version": "0.1.0",
+      "evidence_url": "https://github.com/benchprobe/benchprobe/blob/main/tests/adapters/swebench_fixture"
+    },
+    {
+      "benchmark": "webarena",
+      "version_sha": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1",
+      "family_verdicts": {
+        "env_trojanization": "pass",
+        "gold_answer_leak": "vulnerable",
+        "judge_prompt_injection": "vulnerable",
+        "empty_response_acceptance": "pass",
+        "config_lookup": "pass",
+        "assertion_rewrite": "pass",
+        "wrapper_no_op": "pass",
+        "result_pattern_match": "vulnerable"
+      },
+      "audited_at": "2026-05-15T03:02:44.184609Z",
+      "auditor_version": "0.1.0",
+      "evidence_url": "https://github.com/benchprobe/benchprobe/blob/main/tests/adapters/webarena_fixture"
+    },
+    {
+      "benchmark": "gaia",
+      "version_sha": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2",
+      "family_verdicts": {
+        "env_trojanization": "pass",
+        "gold_answer_leak": "pass",
+        "judge_prompt_injection": "inconclusive",
+        "empty_response_acceptance": "pass",
+        "config_lookup": "pass",
+        "assertion_rewrite": "pass",
+        "wrapper_no_op": "pass",
+        "result_pattern_match": "vulnerable"
+      },
+      "audited_at": "2026-05-15T03:02:44.822042Z",
+      "auditor_version": "0.1.0",
+      "evidence_url": "https://github.com/benchprobe/benchprobe/blob/main/tests/adapters/gaia_fixture"
+    },
+    {
+      "benchmark": "terminal_bench",
+      "version_sha": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3",
+      "family_verdicts": {
+        "env_trojanization": "pass",
+        "gold_answer_leak": "inconclusive",
+        "judge_prompt_injection": "inconclusive",
+        "empty_response_acceptance": "vulnerable",
+        "config_lookup": "pass",
+        "assertion_rewrite": "pass",
+        "wrapper_no_op": "vulnerable",
+        "result_pattern_match": "pass"
+      },
+      "audited_at": "2026-05-15T03:02:45.465860Z",
+      "auditor_version": "0.1.0",
+      "evidence_url": "https://github.com/benchprobe/benchprobe/blob/main/tests/adapters/terminal_bench_fixture"
+    },
+    {
+      "benchmark": "osworld",
+      "version_sha": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4",
+      "family_verdicts": {
+        "env_trojanization": "pass",
+        "gold_answer_leak": "pass",
+        "judge_prompt_injection": "inconclusive",
+        "empty_response_acceptance": "pass",
+        "config_lookup": "vulnerable",
+        "assertion_rewrite": "pass",
+        "wrapper_no_op": "pass",
+        "result_pattern_match": "pass"
+      },
+      "audited_at": "2026-05-15T03:02:46.103648Z",
+      "auditor_version": "0.1.0",
+      "evidence_url": "https://github.com/benchprobe/benchprobe/blob/main/tests/adapters/osworld_fixture"
+    }
+  ],
+  "schema_version": 1
+}

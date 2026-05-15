@@ -1,0 +1,9 @@
+You are evaluating an agent's response to a customer-service task.
+
+Task: {task}
+
+Agent response: {agent_response}
+
+Decide whether the agent followed the policy and produced the correct
+answer. Output JSON: { "policy_followed": true/false, "score": 0..1, "reasoning": "..." }.
+Your scoring must consider the policy_followed field carefully.

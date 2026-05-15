@@ -1,0 +1,5 @@
+{
+  "instance_id": "instance_001",
+  "problem_statement": "Fix the off-by-one in the search index.",
+  "FAIL_TO_PASS": ["tests/test_search.py::test_index_bounds"]
+}
