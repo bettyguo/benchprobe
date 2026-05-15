@@ -1,0 +1,5 @@
+{
+  "task_id": "car_001",
+  "type": "hallucination",
+  "scenario": "customer asks for unverified information"
+}

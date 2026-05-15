@@ -1,0 +1,6 @@
+{
+  "task_id": "agieval_001",
+  "question": "Solve for x: 2x + 3 = 7",
+  "answer": "2",
+  "source": "https://huggingface.co/datasets/baber/agieval"
+}

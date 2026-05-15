@@ -34,6 +34,6 @@ coverage.xml
 .DS_Store
 Thumbs.db
 
-# Generated site output
-leaderboard/site/*.html
-leaderboard/site/*.css
+# Generated site output is committed so GitHub Pages can serve it directly
+# from the repo (in addition to the publish-pages workflow). The renderer
+# is deterministic — diffs in leaderboard/site/ track real verdict changes.

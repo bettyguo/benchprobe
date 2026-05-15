@@ -1,0 +1,6 @@
+{
+  "task_id": "bfcl_001",
+  "question": "Call the weather API for San Francisco",
+  "function": "get_weather(location='San Francisco')",
+  "source": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard"
+}

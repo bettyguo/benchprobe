@@ -23,10 +23,20 @@ from benchprobe.adapters import adapter_names, get_adapter
 FIXTURE_ROOT = Path(__file__).resolve().parent
 ADAPTER_FIXTURE_MAP = {
     "swebench": FIXTURE_ROOT / "swebench_fixture",
+    "swebench_pro": FIXTURE_ROOT / "swebench_pro_fixture",
     "webarena": FIXTURE_ROOT / "webarena_fixture",
     "gaia": FIXTURE_ROOT / "gaia_fixture",
     "terminal_bench": FIXTURE_ROOT / "terminal_bench_fixture",
     "osworld": FIXTURE_ROOT / "osworld_fixture",
+    "frontier_cs": FIXTURE_ROOT / "frontier_cs_fixture",
+    "fieldwork_arena": FIXTURE_ROOT / "fieldwork_arena_fixture",
+    "car_bench": FIXTURE_ROOT / "car_bench_fixture",
+    "humaneval": FIXTURE_ROOT / "humaneval_fixture",
+    "mmlu": FIXTURE_ROOT / "mmlu_fixture",
+    "bfcl": FIXTURE_ROOT / "bfcl_fixture",
+    "agentbench": FIXTURE_ROOT / "agentbench_fixture",
+    "agieval": FIXTURE_ROOT / "agieval_fixture",
+    "livebench": FIXTURE_ROOT / "livebench_fixture",
 }
 
 

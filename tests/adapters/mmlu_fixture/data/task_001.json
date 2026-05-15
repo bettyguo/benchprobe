@@ -1,0 +1,7 @@
+{
+  "task_id": "mmlu_high_school_physics_001",
+  "question": "A ball is thrown upward...",
+  "choices": ["A: 1 m", "B: 2 m", "C: 3 m", "D: 4 m"],
+  "answer": "C",
+  "source": "https://huggingface.co/datasets/cais/mmlu"
+}

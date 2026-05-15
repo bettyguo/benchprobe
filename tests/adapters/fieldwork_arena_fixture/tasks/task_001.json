@@ -1,0 +1,5 @@
+{
+  "task_id": "fwa_001",
+  "scenario": "field visit report",
+  "expected_actions": ["send_msg_to_user"]
+}

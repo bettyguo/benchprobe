@@ -1,0 +1,5 @@
+{
+  "task_id": "001",
+  "prompt": "Implement solve() that returns the answer.",
+  "reference": "see hidden grader"
+}

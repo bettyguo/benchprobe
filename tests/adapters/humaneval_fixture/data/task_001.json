@@ -1,0 +1,7 @@
+{
+  "task_id": "HumanEval/0",
+  "prompt": "def has_close_elements(numbers, threshold):\n    \"\"\"...\"\"\"\n",
+  "test": "assert ...",
+  "entry_point": "has_close_elements",
+  "canonical_solution": "    return any(...)"
+}

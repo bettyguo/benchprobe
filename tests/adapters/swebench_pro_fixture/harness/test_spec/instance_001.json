@@ -1,0 +1,7 @@
+{
+  "instance_id": "django__django-12345",
+  "repo": "django/django",
+  "test_patch": "...",
+  "FAIL_TO_PASS": ["tests.foo.test_bar"],
+  "PASS_TO_PASS": []
+}
