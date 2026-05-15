@@ -254,7 +254,7 @@ Every commit must hold:
 ```bibtex
 @software{benchprobe_2026,
   title  = {BenchProbe: Adversarial Audit Toolkit for AI Agent Benchmarks},
-  author = {{BenchProbe contributors}},
+  author = {Dongxin Guo},
   year   = {2026},
   url    = {https://github.com/bettyguo/benchprobe},
   note   = {Live leaderboard: https://bettyguo.github.io/benchprobe/},
