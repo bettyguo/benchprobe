@@ -1002,6 +1002,13 @@ def render_site(store: LeaderboardStore, out_dir: Path) -> None:
     (out_dir / "index.html").write_text(html, encoding="utf-8")
     (out_dir / "styles.css").write_text(_STYLES, encoding="utf-8")
 
+    # Standalone heatmap SVG — embeddable in the README, in papers, in
+    # social cards. The viewer-agnostic SVG only depends on its own
+    # text and rect elements (no external font references).
+    heatmap_svg = _render_heatmap(entries, families)
+    if heatmap_svg:
+        (out_dir / "heatmap.svg").write_text(heatmap_svg, encoding="utf-8")
+
     # JSON sidecar for programmatic consumers — same shape as the source
     # but flattened for easy ingestion.
     payload = {
