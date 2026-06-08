@@ -26,7 +26,7 @@
   </a>
 </p>
 
-<p align="center"><em>15 benchmarks · 8 exploit families · 120 verdicts · audited 2026-05-15</em></p>
+<p align="center"><em>15 benchmarks · 8 exploit families · 120 verdicts </em></p>
 
 ---
 
