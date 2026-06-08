@@ -249,34 +249,6 @@ Every commit must hold:
 
 ---
 
-## Cite
-
-```bibtex
-@software{benchprobe_2026,
-  title  = {BenchProbe: Adversarial Audit Toolkit for AI Agent Benchmarks},
-  author = {Dongxin Guo},
-  year   = {2026},
-  url    = {https://github.com/bettyguo/benchprobe},
-  note   = {Live leaderboard: https://bettyguo.github.io/benchprobe/},
-  license= {Apache-2.0}
-}
-```
-
-If you cite BenchProbe verdicts in academic work, please *also* cite the
-Berkeley/RDI taxonomy the verdicts audit against:
-
-```bibtex
-@misc{berkeley_rdi_2026,
-  title  = {How We Broke Top AI Agent Benchmarks},
-  author = {Wang, Hao and Mang, Qiuyang and Cheung, Alvin and Sen, Koushik and Song, Dawn},
-  year   = {2026},
-  publisher = {UC Berkeley Center for Responsible, Decentralized Intelligence (RDI)},
-  howpublished = {\url{https://rdi.berkeley.edu/blog/trustworthy-benchmarks/}}
-}
-```
-
----
-
 ## Acknowledgements
 
 This project would not exist without:
